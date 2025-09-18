@@ -13,5 +13,5 @@ class Endpoints {
 
 class AppColors {
   static const Color primary = Color(0x0034344a);
-  static const Color textColor = Color(0x00ffffff);
+  static const Color lightText = Color(0x00ffffff);
 }
