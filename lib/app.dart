@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:plotify/splash/splash_page.dart';
+import 'package:plotify/features/splash/splash_page.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
