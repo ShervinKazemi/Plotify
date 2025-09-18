@@ -44,7 +44,7 @@ class _MainBottomNavState extends State<MainBottomNav> {
         height: 80,
         margin: const EdgeInsets.symmetric(horizontal: 16 , vertical: 32),
         decoration: BoxDecoration(
-          color: theme.colorScheme.onSurface,
+          color: Color(0xFF26253A),
           borderRadius: BorderRadius.circular(24)
         ),
         child: Row(

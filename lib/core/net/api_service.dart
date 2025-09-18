@@ -1,6 +1,6 @@
 
 import 'package:dio/dio.dart';
-import 'package:plotify/core/constants.dart';
+import 'package:plotify/core/constatns/constants.dart';
 import 'package:plotify/core/model/movies.dart';
 
 /// Service class for API requests using Dio.
