@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plotify/features/home/home_page.dart';
+import 'package:plotify/features/profile/profile_page.dart';
 import 'package:plotify/features/watchlist/watchlist_page.dart';
 
 class MainBottomNav extends StatefulWidget {
@@ -21,12 +22,7 @@ class _MainBottomNavState extends State<MainBottomNav> {
   List<Widget> widgets = [
     const HomePage(),
     const WatchlistPage(),
-    const Center(
-      child: Text(
-        "Profile page",
-        style: TextStyle(fontSize: 32, color: Colors.white),
-      ),
-    ),
+    const ProfilePage()
   ];
 
   @override

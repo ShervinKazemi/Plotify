@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:plotify/core/constatns/constants.dart';
-import 'package:plotify/features/home/widget/error_widget.dart';
-import 'package:plotify/features/home/widget/search_items.dart';
 import 'package:plotify/features/watchlist/watchlist_provider.dart';
 import 'package:plotify/features/watchlist/widget/watchlist_item.dart';
 import 'package:plotify/routes/app_route.dart';
