@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:plotify/core/constatns/constants.dart';
 import 'package:plotify/features/detail/detail_provider.dart';
-import 'package:plotify/features/detail/full_screen_image_shower.dart';
+import 'package:plotify/features/detail/widget/full_screen_image_shower.dart';
 import 'package:plotify/features/home/widget/error_widget.dart';
 import 'package:provider/provider.dart';
 

@@ -5,6 +5,7 @@ import 'package:plotify/app.dart';
 import 'package:plotify/core/net/api_service.dart';
 import 'package:plotify/features/detail/detail_provider.dart';
 import 'package:plotify/features/home/home_provider.dart';
+import 'package:plotify/features/watchlist/watchlist_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -18,7 +19,8 @@ void main() {
       MultiProvider(
         providers: [
           ChangeNotifierProvider(create: (context) => HomeProvider(apiService)),
-          ChangeNotifierProvider(create: (context) => DetailProvider(apiService))
+          ChangeNotifierProvider(create: (context) => DetailProvider(apiService)),
+          ChangeNotifierProvider(create: (context) => WatchlistProvider(apiService))
         ],
         child: const App(),
       )
