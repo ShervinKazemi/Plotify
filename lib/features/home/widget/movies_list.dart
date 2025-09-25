@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plotify/core/model/movies.dart';
 import 'package:plotify/features/home/widget/movie_item.dart';
+import 'package:plotify/routes/app_route.dart';
 
 class MoviesList extends StatelessWidget {
   final Movies movies;
@@ -37,7 +38,7 @@ class MoviesList extends StatelessWidget {
                     debugPrint("The movie id is: $id");
                     Navigator.pushNamed(
                       context,
-                      '/detail',
+                      AppRoute.detail,
                       arguments: id,
                     );
                   },

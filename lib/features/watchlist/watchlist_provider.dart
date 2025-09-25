@@ -22,12 +22,19 @@ class WatchlistProvider with ChangeNotifier {
       _setLoading(true);
       _error = null;
 
-      _movies = await _apiService.getMovies(5);
+      _movies = await _apiService.getMovies(6);
 
       _setLoading(false);
     } catch (exception) {
       _setError("Failed to load initial data: $exception");
       _setLoading(false);
+    }
+  }
+
+  void deleteUser(Data movie) {
+    if(_movies!.data!.contains(movie)) {
+      _movies!.data!.remove(movie);
+      notifyListeners();
     }
   }
 

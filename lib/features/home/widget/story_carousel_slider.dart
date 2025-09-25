@@ -84,14 +84,14 @@ class StoryCarouselState extends State<StoryCarousel> {
                   child: Stack(
                     fit: StackFit.expand,
                     children: [
-                      Image.network(widget.images[index], fit: BoxFit.cover),
+                      Image.network(widget.images[index], fit: BoxFit.fill),
                       Container(
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
                             begin: Alignment.bottomCenter,
                             end: Alignment.topCenter,
                             colors: [
-                              Colors.black.withOpacity(0.75),
+                              Colors.black.withValues(alpha: 0.75),
                               Colors.transparent,
                             ],
                           ),

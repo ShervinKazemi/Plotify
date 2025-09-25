@@ -46,7 +46,7 @@ class MovieItem extends StatelessWidget {
                         height: 150,
                         width: 125,
                         movie.poster ?? '',
-                        fit: BoxFit.cover,
+                        fit: BoxFit.fill,
                         errorBuilder: (context, error, stackTrace) {
                           return Container(
                             height: 150,

@@ -41,6 +41,7 @@ class AppTheme {
       appBarTheme: AppBarTheme(
         elevation: 0,
         backgroundColor: Colors.transparent,
+        titleTextStyle: TextStyle(color: Colors.white , fontSize: 32),
       ),
       searchBarTheme: SearchBarThemeData(
         backgroundColor: WidgetStateProperty.all(AppColors.primary),
