@@ -1,10 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:plotify/core/model/movies.dart';
 import 'package:plotify/features/home/home_provider.dart';
 import 'package:plotify/features/home/widget/category_item.dart';
-import 'package:plotify/features/home/widget/movie_item.dart';
 import 'package:plotify/features/home/widget/movies_list.dart';
 import 'package:plotify/features/home/widget/search_items.dart';
 import 'package:plotify/features/home/widget/story_carousel_slider.dart';
