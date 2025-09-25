@@ -56,7 +56,7 @@ class ApiService {
   Future<Movie> getMovieById(int id) async {
     try {
       Response response = await _dio.get(
-        "${Endpoints.movies}/$id"
+        Endpoints.movieById(id)
       );
       if (response.statusCode == 200) {
         return Movie.fromJson(response.data as Map<String, dynamic>);

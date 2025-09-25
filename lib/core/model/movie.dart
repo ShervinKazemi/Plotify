@@ -66,27 +66,27 @@ class Movie {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
-    data['poster'] = this.poster;
-    data['year'] = this.year;
-    data['rated'] = this.rated;
-    data['released'] = this.released;
-    data['runtime'] = this.runtime;
-    data['director'] = this.director;
-    data['writer'] = this.writer;
-    data['actors'] = this.actors;
-    data['plot'] = this.plot;
-    data['country'] = this.country;
-    data['awards'] = this.awards;
-    data['metascore'] = this.metascore;
-    data['imdb_rating'] = this.imdbRating;
-    data['imdb_votes'] = this.imdbVotes;
-    data['imdb_id'] = this.imdbId;
-    data['type'] = this.type;
-    data['genres'] = this.genres;
-    data['images'] = this.images;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['title'] = title;
+    data['poster'] = poster;
+    data['year'] = year;
+    data['rated'] = rated;
+    data['released'] = released;
+    data['runtime'] = runtime;
+    data['director'] = director;
+    data['writer'] = writer;
+    data['actors'] = actors;
+    data['plot'] = plot;
+    data['country'] = country;
+    data['awards'] = awards;
+    data['metascore'] = metascore;
+    data['imdb_rating'] = imdbRating;
+    data['imdb_votes'] = imdbVotes;
+    data['imdb_id'] = imdbId;
+    data['type'] = type;
+    data['genres'] = genres;
+    data['images'] = images;
     return data;
   }
 }

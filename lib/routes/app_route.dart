@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:plotify/features/detail/detail_page.dart';
 import 'package:plotify/features/splash/splash_page.dart';
 import 'package:plotify/routes/main_bottom_nav.dart';
 
@@ -11,7 +12,8 @@ class AppRoute {
 
   static final Map<String , WidgetBuilder> routes = {
     splash: (ctx) => const SplashPage(),
-    home: (ctx) => const MainBottomNav()
+    home: (ctx) => const MainBottomNav(),
+    detail: (ctx) => const DetailPage(),
   };
 
 }

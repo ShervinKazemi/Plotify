@@ -5,8 +5,8 @@ import 'package:plotify/core/model/movies.dart';
 
 class MovieItem extends StatelessWidget {
   final Data movie;
-  final Function(int) onClicked;
-  const MovieItem({super.key, required this.movie, required this.onClicked});
+  final Function(int) onClick;
+  const MovieItem({super.key, required this.movie, required this.onClick});
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +22,10 @@ class MovieItem extends StatelessWidget {
             child: InkWell(
               borderRadius: BorderRadius.circular(16),
               onTap: () {
-                onClicked(movie.id!);
-                HapticFeedback.lightImpact();
+                if (movie.id != null) {
+                  HapticFeedback.lightImpact();
+                  onClick(movie.id ?? 1);
+                }
               },
               child: Container(
                 decoration: BoxDecoration(
@@ -63,7 +65,10 @@ class MovieItem extends StatelessWidget {
                           color: Colors.transparent,
                           child: InkWell(
                             onTap: () {
-                              HapticFeedback.lightImpact();
+                              if (movie.id != null) {
+                                HapticFeedback.lightImpact();
+                                onClick(movie.id ?? 1);
+                              }
                             },
                             splashColor: Colors.white.withValues(alpha: 0.1),
                             highlightColor: Colors.white.withValues(alpha: 0.05),

@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:plotify/app.dart';
 import 'package:plotify/core/net/api_service.dart';
+import 'package:plotify/features/detail/detail_provider.dart';
 import 'package:plotify/features/home/home_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -16,7 +17,8 @@ void main() {
   runApp(
       MultiProvider(
         providers: [
-          ChangeNotifierProvider(create: (context) => HomeProvider(apiService))
+          ChangeNotifierProvider(create: (context) => HomeProvider(apiService)),
+          ChangeNotifierProvider(create: (context) => DetailProvider(apiService))
         ],
         child: const App(),
       )

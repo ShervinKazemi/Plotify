@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:plotify/features/detail/detail_page.dart';
 import 'package:plotify/features/home/home_provider.dart';
 import 'package:plotify/features/home/widget/category_item.dart';
+import 'package:plotify/features/home/widget/error_widget.dart';
 import 'package:plotify/features/home/widget/movies_list.dart';
 import 'package:plotify/features/home/widget/search_items.dart';
 import 'package:plotify/features/home/widget/story_carousel_slider.dart';
@@ -92,47 +94,12 @@ class _HomePageState extends State<HomePage> {
 
                 if (homeProvider.error != null &&
                     homeProvider.error!.isNotEmpty) {
-                  return Container(
-                    margin: const EdgeInsets.symmetric(
-                      horizontal: 32,
-                      vertical: 128,
-                    ),
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: colorScheme.onErrorContainer),
-                      borderRadius: BorderRadius.circular(16),
-                      color: colorScheme.error.withOpacity(0.4),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        children: [
-                          Icon(
-                            Icons.error_outline_rounded,
-                            color: colorScheme.onError,
-                            size: 128,
-                          ),
-                          const Gap(16),
-                          Text(
-                            "Oopps...",
-                            style: textTheme.titleLarge!.copyWith(
-                              color: colorScheme.onError,
-                            ),
-                          ),
-                          const Gap(16),
-                          ElevatedButton(
-                            onPressed: () {
-                              provider.getSearchMovies();
-                            },
-                            child: Icon(
-                              Icons.threesixty_rounded,
-                              color: colorScheme.onErrorContainer,
-                              size: 30,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                  return ShowError(
+                    colorScheme: colorScheme,
+                    textTheme: textTheme,
+                    homeProvider: homeProvider,
+                    isDetailPage: false,
+                    detailProvider: null,
                   );
                 }
 
@@ -191,7 +158,7 @@ class _HomePageState extends State<HomePage> {
                           movies: homeProvider.recommended!,
                           title: "Recommended",
                         ),
-                        const Gap(128)
+                        const Gap(128),
                       ],
                     );
                   } else {
@@ -226,11 +193,21 @@ class _HomePageState extends State<HomePage> {
                 return ListView.builder(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  padding: const EdgeInsets.only(bottom: 16),
+                  padding: const EdgeInsets.only(bottom: 128),
                   itemCount: homeProvider.searches!.data!.length,
                   itemBuilder: (context, index) {
                     final movie = homeProvider.searches!.data![index];
-                    return SearchItems(movie: movie, onClick: (int id) {});
+                    return SearchItems(
+                      movie: movie,
+                      onClick: (int id) {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const DetailPage(),
+                            settings: RouteSettings(arguments: id),
+                          ),
+                        );
+                      },
+                    );
                   },
                 );
               },

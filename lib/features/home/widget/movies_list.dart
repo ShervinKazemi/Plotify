@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:plotify/core/model/movies.dart';
 import 'package:plotify/features/home/widget/movie_item.dart';
@@ -18,7 +17,7 @@ class MoviesList extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(title, style: TextTheme.of(context).titleMedium),
+              Text(title, style: Theme.of(context).textTheme.titleMedium),
               TextButton(
                 onPressed: () {},
                 child: Text("View all", style: TextStyle(color: Colors.grey)),
@@ -32,9 +31,17 @@ class MoviesList extends StatelessWidget {
               itemCount: movies.data!.length,
               itemBuilder: (context, index) {
                 final movie = movies.data![index];
-                return MovieItem(movie: movie , onClicked: (int id) {
-                  
-                },);
+                return MovieItem(
+                  movie: movie,
+                  onClick: (int id) {
+                    debugPrint("The movie id is: $id");
+                    Navigator.pushNamed(
+                      context,
+                      '/detail',
+                      arguments: id,
+                    );
+                  },
+                );
               },
             ),
           ),
