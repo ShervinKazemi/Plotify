@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:plotify/core/theme.dart';
+import 'package:plotify/core/theme/theme.dart';
 import 'package:plotify/routes/app_route.dart';
 
 class App extends StatelessWidget {
