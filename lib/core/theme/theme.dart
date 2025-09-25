@@ -41,7 +41,26 @@ class AppTheme {
       appBarTheme: AppBarTheme(
         elevation: 0,
         backgroundColor: Colors.transparent,
-      )
+      ),
+      searchBarTheme: SearchBarThemeData(
+        backgroundColor: WidgetStateProperty.all(AppColors.primary),
+        hintStyle: WidgetStateProperty.all(TextStyle(color: Colors.grey)),
+        elevation: WidgetStateProperty.all(0),
+        padding: WidgetStateProperty.all(
+          const EdgeInsets.symmetric(horizontal: 16),
+        ),
+        shape: WidgetStateProperty.all(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(32),
+            side: BorderSide(color: Colors.grey, width: 1),
+          ),
+        ),
+        textStyle: WidgetStateProperty.all(
+          TextStyle(
+            color: Colors.white
+          )
+        ),
+      ),
     );
     return baseLight;
   }

@@ -8,6 +8,7 @@ class AppConstants {
 
 class Endpoints {
   static const String movies = '/movies';
+  static const String genres = "/genres";
   static String movieById(int id) => '/movies/$id';
 }
 
