@@ -6,13 +6,6 @@ Plotify is a beautiful Flutter app that lets you discover, search, and explore m
 
 ---
 
-## 📸 Screenshots  
-| Home Screen | Watchlist Screen | Profile Screen |
-|------------|----------|----------|
-| ![Home Screen](home.jpg) | ![Watchlist Screen](watchlist.jpg) | ![Profile Screen](profile.jpg) |
-
----
-
 ## ✨ Features
 
 - 🔍 **Search** for movies and shows instantly
@@ -76,7 +69,9 @@ assets/
 
 ## 📸 Screenshots
 
-> _Add screenshots of your app here for a more visual README !_
+| Home Screen | Watchlist Screen | Profile Screen |
+|------------|----------|----------|
+| ![Home Screen](home.jpg) | ![Watchlist Screen](watchlist.jpg) | ![Profile Screen](profile.jpg) |
 
 ---
 
